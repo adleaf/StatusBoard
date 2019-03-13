@@ -9,7 +9,6 @@ app.get("/", function (req, res) {
 
 //return all other files when requested using the given path
 app.get("*", function (req, res) {
-    console.log(req);
     res.sendFile(path.join(__dirname, req["params"]["0"]));
 });
 
